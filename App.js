@@ -1,23 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import styled from 'styled-components';
+//import styled from 'styled-components';
 //import Radium,{ StyleRoot } from 'radium';
 import Person from './Person/Person';
 
-
-const StyledButton = styled.button`
-  background-color: ${props => props.alt ? 'red': 'green'};
-  color: white;
-  font: inherit;
-  border: 1px solid blue;
-  padding: 8px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: lightgreen;
-    color:black;
-  }
-  `;
 
 class App extends Component {
   state = {
@@ -112,9 +98,9 @@ if (this.state.persons.length <=1) {
       <div className="App">
         <h1>Hi, I'm a React App</h1>
         <p className ={classes.join(' ')}>This is really working!!</p>
-        <StyledButton alt={this.state.showPersons} onClick={() => this.togglePersonsHandler()}>
+        <button className = "button" onClick={() => this.togglePersonsHandler()}>
           Toggle Persons
-        </StyledButton>
+        </button>
 
         {persons}
       </div>
